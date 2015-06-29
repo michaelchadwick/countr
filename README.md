@@ -1,4 +1,4 @@
-# Count
+# Countr
 
 Simple RubyGem that counts the number of characters in a string and displays it. Make sure to escape any quotes (`\'`) or double-quotes (`\"`) (if'n your string has something quoted, for example) so that they are included in the overall count.
 
@@ -7,7 +7,7 @@ Simple RubyGem that counts the number of characters in a string and displays it.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'count'
+gem 'countr'
 ```
 
 And then execute:
@@ -16,15 +16,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install count
+    $ gem install countr
 
 ## Usage
 
-`count string`
+`countr string`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/count.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/countr.
 
 ## License
 

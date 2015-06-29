@@ -1,3 +1,3 @@
-module Count
+module Countr
   VERSION = "0.1.0"
 end

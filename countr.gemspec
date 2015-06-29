@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'count/version'
+require 'countr/version'
 
 Gem::Specification.new do |spec|
-  spec.name           = "count"
-  spec.version        = Count::VERSION
+  spec.name           = "countr"
+  spec.version        = Countr::VERSION
   spec.authors        = ["Michael Chadwick"]
   spec.email          = ["michael.chadwick@gmail.com"]
-  spec.homepage       = 'http://rubygems.org/gems/count'
+  spec.homepage       = 'http://rubygems.org/gems/countr'
   spec.summary        = 'Displays the number of character in a string'
   spec.description    = 'Simple RubyGem that takes a string and displays the number of characters'
 

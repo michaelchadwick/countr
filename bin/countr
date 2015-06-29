@@ -9,7 +9,7 @@ def parse_options
 
   optparse = OptionParser.new do |opts|
     opts.banner =  "#{BINARY_NAME}: display the number of characters in a string\n"
-    opts.banner += "usage: count string\n"
+    opts.banner += "usage: countr string\n"
     opts.banner += "Note: quotes and double-quotes will not be counted unless escaped with a \\"
   
     opts.on('-v', '--version', 'Display version number and exit') do
