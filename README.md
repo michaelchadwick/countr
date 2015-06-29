@@ -2,6 +2,8 @@
 
 Simple RubyGem that counts the number of characters in a string and displays it. Make sure to escape any quotes (`\'`) or double-quotes (`\"`) (if'n your string has something quoted, for example) so that they are included in the overall count.
 
+Example usage (for checking tweet length): `countr \@username and then I said \"OMG this new rubygem called \'countr\' is super-cool!\"`
+
 ## Installation
 
 Add this line to your application's Gemfile:
