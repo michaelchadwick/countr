@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+BINARY_NAME = $PROGRAM_NAME.split('/').last
+
+def parse_options
+  options = {}
+
+  optparse = OptionParser.new do |opts|
+    opts.banner =  "#{BINARY_NAME}: display the number of characters in a string\n"
+    opts.banner += "usage: count string\n"
+    opts.banner += "Note: quotes and double-quotes will not be counted unless escaped with a \\"
+  
+    opts.on('-v', '--version', 'Display version number and exit') do
+      puts "#{BINARY_NAME} v#{VERSION}"
+      exit
+    end
+    
+    opts.on('-h', '--help', 'Display this screen and exit') do
+      puts opts
+      exit
+    end
+  end
+
+  optparse.parse!()
+
+  return options
+end
+
+def print_error(error)
+  case error
+  when OptionParser::InvalidOption
+    puts "#{BINARY_NAME}: illegal option #{error.args.join(' ')}"
+  else
+    puts "An unexpected error occurred while running #{BINARY_NAME}:"
+    puts "  #{error}\n"
+  end
+end
+
+begin
+  options = parse_options
+
+  count = 0
+  
+  for i in 0..ARGV.length-1 do
+    count += ARGV[i].length
+  end
+  
+  count += ARGV.length-1
+  
+  puts count
+rescue => error
+  print_error(error)
+  exit(false)
+end
