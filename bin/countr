@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
+require_relative '../lib/countr/version'
 
 BINARY_NAME = $PROGRAM_NAME.split('/').last
 
@@ -13,7 +14,7 @@ def parse_options
     opts.banner += "Note: quotes and double-quotes will not be counted unless escaped with a \\"
   
     opts.on('-v', '--version', 'Display version number and exit') do
-      puts "#{BINARY_NAME} v#{VERSION}"
+      puts "#{BINARY_NAME} v#{Countr::VERSION}"
       exit
     end
     
