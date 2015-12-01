@@ -1,32 +1,24 @@
 # Countr
 
-Simple RubyGem that counts the number of characters in a string and displays it. Make sure to escape any quotes (`\'`) or double-quotes (`\"`) (if'n your string has something quoted, for example) so that they are included in the overall count.
+[![Gem Version](https://badge.fury.io/rb/countr.svg)](http://badge.fury.io/rb/countr)
 
-Example usage (for checking tweet length): `countr \@username and then I said \"OMG this new rubygem called \'countr\' is super-cool!\"`
+A simple RubyGem that counts the number of characters in a string and displays it.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'countr'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install countr
+*NOTE:* Make sure to escape any quotes (`\\'`) or double-quotes (`\\"`) (if'n your string has something quoted, for example) so that they are included in the overall count.
 
 ## Usage
 
-`countr string`
+`countr STRING`  
+
+Examples:
+* Tweet length:  
+  `$ countr \@username and then I said \"OMG this new rubygem called \'countr\' is super-cool!\"`  
+* Arbitrary sentence:  
+  `$ countr Sundry items have a way of creeping into your subconscious, whether your mind lingered on them for long or not.`  
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/countr.
+Bug reports and pull requests are welcome on GitHub at https://github.com/michaelchadwick/countr.
 
 ## License
 

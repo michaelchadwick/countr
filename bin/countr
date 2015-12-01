@@ -9,16 +9,16 @@ def parse_options
   options = {}
 
   optparse = OptionParser.new do |opts|
-    opts.banner =  "#{BINARY_NAME}: display the number of characters in a string\n"
-    opts.banner += "usage: countr string\n"
-    opts.banner += "Note: quotes and double-quotes will not be counted unless escaped with a \\"
-  
+    opts.banner =  "Displays the number of characters in a string\n"
+    opts.banner += "usage: countr STRING\n"
+    opts.banner += "NOTE: quotes and double-quotes will not be counted unless escaped with a \\"
+
     opts.on('-v', '--version', 'Display version number and exit') do
-      puts "#{BINARY_NAME} v#{Countr::VERSION}"
+      puts "#{Countr::VERSION}"
       exit
     end
-    
-    opts.on('-h', '--help', 'Display this screen and exit') do
+
+    opts.on('-h', '-?', '--help', 'Display this screen and exit') do
       puts opts
       exit
     end
@@ -32,10 +32,9 @@ end
 def print_error(error)
   case error
   when OptionParser::InvalidOption
-    puts "#{BINARY_NAME}: illegal option #{error.args.join(' ')}"
+    puts "#{BINARY_NAME} ERROR: illegal option #{error.args.join(' ')}"
   else
-    puts "An unexpected error occurred while running #{BINARY_NAME}:"
-    puts "  #{error}\n"
+    puts "#{BINARY_NAME} ERROR: #{error}"
   end
 end
 
@@ -43,14 +42,13 @@ begin
   options = parse_options
 
   count = 0
-  
-  for i in 0..ARGV.length-1 do
-    count += ARGV[i].length
+  words = ARGV.join(" ")
+
+  for i in 0..words.length-1 do
+    count += words[i].length
   end
-  
-  count += ARGV.length-1
-  
-  puts count
+
+  print count
 rescue => error
   print_error(error)
   exit(false)
