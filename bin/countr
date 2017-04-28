@@ -6,7 +6,9 @@ require_relative '../lib/countr/version'
 BINARY_NAME = $PROGRAM_NAME.split('/').last
 
 def parse_options
-  options = {}
+  options = {
+    :oneline => false
+  }
 
   optparse = OptionParser.new do |opts|
     opts.banner =  "Displays the number of characters in a string\n"
@@ -16,6 +18,10 @@ def parse_options
     opts.on('-v', '--version', 'Display version number and exit') do
       puts "#{Countr::VERSION}"
       exit
+    end
+
+    opts.on('-n', '--no-line-break', 'No newline when returning count') do
+      options[:oneline] = true
     end
 
     opts.on('-h', '-?', '--help', 'Display this screen and exit') do
@@ -48,7 +54,11 @@ begin
     count += words[i].length
   end
 
-  print count
+  if options[:oneline]
+    print count
+  else
+    puts count
+  end
 rescue => error
   print_error(error)
   exit(false)
