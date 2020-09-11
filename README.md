@@ -8,17 +8,18 @@ A simple RubyGem that counts the number of characters in a string and displays i
 
 ## Usage
 
-`countr STRING`  
+`countr STRING`
 
 Examples:
-* Tweet length:  
-  `$ countr \@username and then I said \"OMG this new rubygem called \'countr\' is super-cool!\"`  
-* Arbitrary sentence:  
-  `$ countr Sundry items have a way of creeping into your subconscious, whether your mind lingered on them for long or not.`  
+
+* Tweet length:
+  `$ countr \@username and then I said \"OMG this new rubygem called \'countr\' is super-cool!\"`
+* Arbitrary sentence:
+  `$ countr Sundry items have a way of creeping into your subconscious, whether your mind lingered on them for long or not.`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/michaelchadwick/countr.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/michaelchadwick/countr>.
 
 ## License
 
